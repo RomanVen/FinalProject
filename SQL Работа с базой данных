@@ -1,6 +1,6 @@
 Задание 1
 
-SELECT c.login, COUNT(o."inDelivery") AS quantity_of_orders_with_indelivery_status 
+SELECT c.login, COUNT(o.id) AS quantity_of_orders_with_indelivery_status 
 FROM "Orders" AS o INNER JOIN "Couriers" AS c on c.id = o."courierId" WHERE o."inDelivery" = true 
 GROUP BY c.login;
 
